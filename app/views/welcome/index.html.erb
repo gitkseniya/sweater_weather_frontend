@@ -1,0 +1,18 @@
+<div class="card text-center">
+  <h1 class="mb-3">Welcome to the Roadtrip Planner!</h1>
+
+  <br><br>
+  For weather at a particular location, click here:
+
+  <%= form_with url: "/weather", method: :get, local: true do |f| %>
+    <%= f.text_field :city %>
+    <%= f.submit 'Search Weather' %>
+  <% end %>
+
+  <br><br>
+  For roadtrip planning, you will need to register here:
+
+  <br><%= link_to "Register", new_user_path %>   
+  <%= link_to "Log In", login_path %>
+
+</div>

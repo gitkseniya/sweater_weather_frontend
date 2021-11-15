@@ -1,0 +1,30 @@
+<div class="card text-center">
+  <h1 class="mb-3">Let's go on a roadtrip!</h1>
+
+
+<%= form_with url: "/road_trip", method: :get, local: true do |f| %>
+  Origin: <%= f.text_field :origin %>
+  Destination: <%= f.text_field :destination %>
+  <%= f.submit 'Search' %>
+<% end %>
+<br><br><br>
+<% if @roadtrip.present? %>
+  Starting point: <%= @roadtrip.start_city %><br>
+  Ending point: <%= @roadtrip.end_city %><br>
+  Total travel time: <%= @roadtrip.travel_time %><br>
+  Sunrise: <%= @roadtrip.sunrise %><br>
+  Sunset: <%= @roadtrip.sunset %><br>
+  Highest temperature: <%= @roadtrip.max_temp %>C<br>
+  Lowest temperature: <%= @roadtrip.min_temp %>C<br>
+  Conditions: <%= @roadtrip.conditions %><br><br>
+<% end %>
+
+<% if @roadtrip.max_temp > 70 %>
+  <img src="https://lh3.googleusercontent.com/proxy/iPXlCxSAvwQgGQPKXNkQeVlFkGGppedmKfIfd7NcxOh-xqonFcBO6CcBDdSxWth-P_ndF4Tx3XQHT7XKDsozygbs" width="200" height="200"/>
+<% elsif   @roadtrip.max_temp > 45 %>
+  <img src="https://cdn4.iconfinder.com/data/icons/winter-cartoon-1/512/val46_5-512.png" width="250" height="250"/>
+<% else %>
+  <img src="https://thumbs.gfycat.com/CheapSparklingAntarcticgiantpetrel-max-1mb.gif" width="250" height="250"/>
+<% end %>
+
+</div>

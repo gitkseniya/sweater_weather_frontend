@@ -1,0 +1,39 @@
+<div class="card text-center">
+
+  <div class="card-body">
+    <h3 class="card-title">Current Weather</h3>
+
+    <p class="card-text">Sunrise time: <%= @current_weather.sunrise_time %><br>
+    Sunset time: <%= @current_weather.sunset_time %><br>
+    Date and time now: <%= @current_weather.datetime %><br>
+    Temperature: <%= @current_weather.temperature %><br>
+    Feels like: <%= @current_weather.feels_like %><br>
+    Humidity: <%= @current_weather.humidity %><br>
+    Uvi: <%= @current_weather.uvi %><br>
+    Visibility: <%= @current_weather.visibility %><br>
+    Conditions: <%= @current_weather.conditions %><br>
+  </p>
+
+
+
+    <h3 class="card-title">Daily Weather</h3>
+    <p class="card-text"><% @daily_weather.each do |day| %>
+      Date: <%= day[:date] %><br>
+      Sunrise: <%= day[:sunrise] %><br>
+      Sunset: <%= day[:sunset] %><br>
+      Max temp: <%= day[:max_temp] %><br>
+      Min temp: <%= day[:min_temp] %><br>
+      Conditions: <%= day[:conditions] %><br><br>
+    <% end %>
+  </p>
+
+
+    <h3 class="card-title">Hourly Weather</h3>
+    <p class="card-text"><% @hourly_weather.each do |hour| %>
+      Time: <%= hour[:time] %><br>
+      Temperature: <%= hour[:temperature] %><br>
+      Conditions: <%= hour[:conditions] %><br><br>
+    <% end %>
+    </p>
+  </div>
+</div>
