@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe RoadTripService do
   describe 'happy path' do
-    it 'grabs top forty movies', :vcr do
+    it 'builds a trip', :vcr do
         data = RoadTripService.get_trip_details("Denver,CO", "Gunnison,CO", "123")
 
         expect(data).to be_a(Hash)
@@ -12,7 +12,13 @@ RSpec.describe RoadTripService do
         expect(data[:data][:attributes][:travel_time]).to eq("3h 36min")
         expect(data[:data][:attributes][:weather_at_eta]).to be_a(Hash)
         expect(data[:data][:attributes][:weather_at_eta].keys).to eq([:date, :sunrise, :sunset, :max_temp, :min_temp, :conditions, :icon])
+    end
 
+    it 'cannot build a trip with given parameters', :vcr do
+      data = RoadTripService.get_trip_details("Denver,CO", "London", "123")
+
+      expect(data).to be_a(Hash)
+      expect(data[:data][:attributes][:travel_time] == "impossible").to eq(true)
     end
 
   end

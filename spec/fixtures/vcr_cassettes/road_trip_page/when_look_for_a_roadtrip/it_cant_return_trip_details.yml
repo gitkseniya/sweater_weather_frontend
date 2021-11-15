@@ -5,7 +5,7 @@ http_interactions:
     uri: https://sweater-weather-kk.herokuapp.com/api/v1/users
     body:
       encoding: UTF-8
-      string: email=wxyz%40email.com&password=1234&password_confirmation=1234
+      string: email=klm%40email.com&password=1234&password_confirmation=1234
     headers:
       User-Agent:
       - Faraday v1.8.0
@@ -23,33 +23,33 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 15 Nov 2021 10:08:12 GMT
+      - Mon, 15 Nov 2021 10:08:14 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"a2bf5032768bc00e01d51eba47a83008"
+      - W/"6483938f6eb36ddc1086552bb6ac0fdb"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d72abe7c-305d-4311-8747-32aeb9d8495d
+      - 59761ea1-aa9e-4d1e-b0eb-d2294f8553a4
       X-Runtime:
-      - '0.260484'
+      - '0.257798'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"13","type":"users","attributes":{"email":"wxyz@email.com","api_key":"e8981835790bb886513a4e99e3e0cb37"}}}'
-  recorded_at: Mon, 15 Nov 2021 10:08:12 GMT
+      string: '{"data":{"id":"14","type":"users","attributes":{"email":"klm@email.com","api_key":"df1be2b11927c0dd2c9c8b80f400c204"}}}'
+  recorded_at: Mon, 15 Nov 2021 10:08:14 GMT
 - request:
     method: post
     uri: https://sweater-weather-kk.herokuapp.com/api/v1/road_trip
     body:
       encoding: UTF-8
-      string: api_key=e8981835790bb886513a4e99e3e0cb37&destination=Boulder%2CCO&origin=Denver%2CCO
+      string: api_key=df1be2b11927c0dd2c9c8b80f400c204&destination=London&origin=Denver%2CCO
     headers:
       User-Agent:
       - Faraday v1.8.0
@@ -67,27 +67,25 @@ http_interactions:
       Server:
       - Cowboy
       Date:
-      - Mon, 15 Nov 2021 10:08:13 GMT
+      - Mon, 15 Nov 2021 10:08:15 GMT
       Connection:
       - keep-alive
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"e87940d242d79422a485fea200c9b272"
+      - W/"3600120abf479cfd7efd0f73630600c2"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fee6af7d-54a4-416c-ac2d-ee94f8de855b
+      - f2442a81-711f-4cbc-9b9e-3562f6973001
       X-Runtime:
-      - '0.431775'
+      - '0.499382'
       Transfer-Encoding:
       - chunked
       Via:
       - 1.1 vegur
     body:
       encoding: UTF-8
-      string: '{"data":{"id":null,"type":"road_trip","attributes":{"start_city":"Denver,CO","end_city":"Boulder,CO","travel_time":"0h
-        34min","weather_at_eta":{"sunrise":"2021-11-15T13:46:49.000+00:00","datetime":"2021-11-15T10:08:13.000+00:00","sunset":"2021-11-15T23:44:59.000+00:00","temperature":56.39,"feels_like":53.33,"humidity":34,"uvi":0.0,"visibility":10000,"conditions":"clear
-        sky","icon":"01n"}}}}'
-  recorded_at: Mon, 15 Nov 2021 10:08:13 GMT
+      string: '{"data":{"id":null,"type":"road_trip","attributes":{"start_city":"Denver,CO","end_city":"London","travel_time":"impossible","weather_at_eta":""}}}'
+  recorded_at: Mon, 15 Nov 2021 10:08:15 GMT
 recorded_with: VCR 6.0.0

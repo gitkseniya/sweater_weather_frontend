@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sweater-weather-kk.herokuapp.com/api/v1/users
+    body:
+      encoding: UTF-8
+      string: email=abcdefg%40email.com&password=1234&password_confirmation=1234
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 15 Nov 2021 10:13:07 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"df758ec7045f4296bb5d79539258035e"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2a31783d-9d3f-434b-bf87-4dddf5c26541
+      X-Runtime:
+      - '0.269316'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"16","type":"users","attributes":{"email":"abcdefg@email.com","api_key":"d7e049c5bd24e06865ddc07364904fc7"}}}'
+  recorded_at: Mon, 15 Nov 2021 10:13:07 GMT
+recorded_with: VCR 6.0.0

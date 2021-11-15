@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:email])
 
-    if user.nil?
+    if user.nil? 
       flash[:notice] = 'Incorrect input'
       redirect_to login_path
     else

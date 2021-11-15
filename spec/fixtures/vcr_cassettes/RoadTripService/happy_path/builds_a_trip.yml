@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sweater-weather-kk.herokuapp.com/api/v1/road_trip
+    body:
+      encoding: UTF-8
+      string: api_key=123&destination=Gunnison%2CCO&origin=Denver%2CCO
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 15 Nov 2021 09:57:17 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"e3de415c928f0484f4b6bd2364d76b83"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9fa557e5-7fd5-4273-a72d-8b7a0f2b14d3
+      X-Runtime:
+      - '0.477879'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"road_trip","attributes":{"start_city":"Denver,CO","end_city":"Gunnison,CO","travel_time":"3h
+        36min","weather_at_eta":{"date":"2021-11-15T18:00:00.000+00:00","sunrise":"2021-11-15T13:50:05.000+00:00","sunset":"2021-11-15T23:54:53.000+00:00","max_temp":59.09,"min_temp":30.58,"conditions":"scattered
+        clouds","icon":"03d"}}}}'
+  recorded_at: Mon, 15 Nov 2021 09:57:18 GMT
+recorded_with: VCR 6.0.0

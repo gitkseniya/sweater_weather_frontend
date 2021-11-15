@@ -1,0 +1,47 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sweater-weather-kk.herokuapp.com/api/v1/road_trip
+    body:
+      encoding: UTF-8
+      string: api_key=123&destination=London&origin=Denver%2CCO
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 15 Nov 2021 09:57:18 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"3600120abf479cfd7efd0f73630600c2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 94a0f757-2eeb-42d9-ac74-f44cd2d310ba
+      X-Runtime:
+      - '0.416375'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"road_trip","attributes":{"start_city":"Denver,CO","end_city":"London","travel_time":"impossible","weather_at_eta":""}}}'
+  recorded_at: Mon, 15 Nov 2021 09:57:18 GMT
+recorded_with: VCR 6.0.0
