@@ -6,8 +6,13 @@ class SessionsController < ApplicationController
   end
 
   def create
-    User.find_by(email: params[:email])
+    user = User.find_by(email: params[:email])
 
-    redirect_to road_trip_path
+    if user.nil?
+      flash[:notice] = 'Incorrect input'
+      redirect_to login_path
+    else
+      redirect_to road_trip_path
+    end
   end
 end

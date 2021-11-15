@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+
+    <% flash.each do |k, v| %>
+    <div class="alert alert-warning" role="alert" id="<%= k %>"><%= v %></div>
+    <% end %>
+
+
   <head>
     <title>SweaterWeatherFrontend</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -13,7 +19,4 @@
   <body>
     <%= yield %>
   </body>
-  <% flash.each do |k, v| %>
-    <div id="<%= k %>"><%= v %></div>
-  <% end %>
 </html>

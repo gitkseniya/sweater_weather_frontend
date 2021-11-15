@@ -1,0 +1,93 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://sweater-weather-kk.herokuapp.com/api/v1/users
+    body:
+      encoding: UTF-8
+      string: email=1234%40email.com&password=1234&password_confirmation=1234
+    headers:
+      User-Agent:
+      - Faraday v0.17.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 15 Nov 2021 08:38:33 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"c787008214b5b3709c74b4dbef23353c"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - '003588df-8a1d-4106-8e40-504ad31b1f23'
+      X-Runtime:
+      - '0.270089'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"8","type":"users","attributes":{"email":"1234@email.com","api_key":"172e5953a64de86fc4419a8087a32564"}}}'
+  recorded_at: Mon, 15 Nov 2021 08:38:33 GMT
+- request:
+    method: post
+    uri: https://sweater-weather-kk.herokuapp.com/api/v1/road_trip
+    body:
+      encoding: UTF-8
+      string: api_key=172e5953a64de86fc4419a8087a32564&destination=Boulder%2CCO&origin=Denver%2CCO
+    headers:
+      User-Agent:
+      - Faraday v0.17.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 15 Nov 2021 08:38:34 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"3894216392d728bf373bebba19ef8eaf"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3c7eaa64-3ec9-459c-a3cb-2ae4049c81bb
+      X-Runtime:
+      - '0.547752'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"road_trip","attributes":{"start_city":"Denver,CO","end_city":"Boulder,CO","travel_time":"0h
+        34min","weather_at_eta":{"sunrise":"2021-11-15T13:46:49.000+00:00","datetime":"2021-11-15T08:38:34.000+00:00","sunset":"2021-11-15T23:44:59.000+00:00","temperature":57.9,"feels_like":54.99,"humidity":34,"uvi":0.0,"visibility":10000,"conditions":"clear
+        sky","icon":"01n"}}}}'
+  recorded_at: Mon, 15 Nov 2021 08:38:34 GMT
+recorded_with: VCR 6.0.0

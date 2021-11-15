@@ -1,0 +1,106 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://sweater-weather-kk.herokuapp.com/api/v1/forecast
+    body:
+      encoding: UTF-8
+      string: location=123
+    headers:
+      User-Agent:
+      - Faraday v0.17.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 15 Nov 2021 08:04:50 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0507a0b5d3f41b85fee28567494a84fc"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 30e24953-e5f0-4924-b98a-993e0bc99465
+      X-Runtime:
+      - '0.359635'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":null,"type":"forecast","attributes":{"current_weather":{"sunrise":"2021-11-15T00:59:39.000+00:00","datetime":"2021-11-15T08:04:51.000+00:00","sunset":"2021-11-15T12:23:50.000+00:00","temperature":85.55,"feels_like":88.95,"humidity":56,"uvi":7.74,"visibility":10000,"conditions":"scattered
+        clouds","icon":"03d"},"daily_weather":[{"date":"2021-11-15T06:30:00.000+00:00","sunrise":"2021-11-15T00:59:39.000+00:00","sunset":"2021-11-15T12:23:50.000+00:00","max_temp":85.73,"min_temp":73.47,"conditions":"moderate
+        rain","icon":"10d"},{"date":"2021-11-16T06:30:00.000+00:00","sunrise":"2021-11-16T01:00:09.000+00:00","sunset":"2021-11-16T12:23:43.000+00:00","max_temp":82.02,"min_temp":71.37,"conditions":"moderate
+        rain","icon":"10d"},{"date":"2021-11-17T06:30:00.000+00:00","sunrise":"2021-11-17T01:00:40.000+00:00","sunset":"2021-11-17T12:23:37.000+00:00","max_temp":82.42,"min_temp":71.37,"conditions":"moderate
+        rain","icon":"10d"},{"date":"2021-11-18T06:30:00.000+00:00","sunrise":"2021-11-18T01:01:11.000+00:00","sunset":"2021-11-18T12:23:32.000+00:00","max_temp":82.2,"min_temp":70.77,"conditions":"light
+        rain","icon":"10d"},{"date":"2021-11-19T06:30:00.000+00:00","sunrise":"2021-11-19T01:01:42.000+00:00","sunset":"2021-11-19T12:23:28.000+00:00","max_temp":73.49,"min_temp":68.63,"conditions":"light
+        rain","icon":"10d"}],"hourly_weather":[{"time":"2021-11-15T08:00:00.000+00:00","temperature":85.55,"conditions":"scattered
+        clouds","icon":"scattered clouds"},{"time":"2021-11-15T09:00:00.000+00:00","temperature":85.68,"conditions":"scattered
+        clouds","icon":"scattered clouds"},{"time":"2021-11-15T10:00:00.000+00:00","temperature":85.73,"conditions":"scattered
+        clouds","icon":"scattered clouds"},{"time":"2021-11-15T11:00:00.000+00:00","temperature":85.05,"conditions":"broken
+        clouds","icon":"broken clouds"},{"time":"2021-11-15T12:00:00.000+00:00","temperature":82.35,"conditions":"broken
+        clouds","icon":"broken clouds"},{"time":"2021-11-15T13:00:00.000+00:00","temperature":80.31,"conditions":"light
+        rain","icon":"light rain"},{"time":"2021-11-15T14:00:00.000+00:00","temperature":80.08,"conditions":"overcast
+        clouds","icon":"overcast clouds"},{"time":"2021-11-15T15:00:00.000+00:00","temperature":79.92,"conditions":"overcast
+        clouds","icon":"overcast clouds"}]}}}'
+  recorded_at: Mon, 15 Nov 2021 08:04:51 GMT
+- request:
+    method: get
+    uri: https://sweater-weather-kk.herokuapp.com/api/v1/backgrounds
+    body:
+      encoding: UTF-8
+      string: location=123
+    headers:
+      User-Agent:
+      - Faraday v0.17.4
+      Content-Type:
+      - application/x-www-form-urlencoded
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 15 Nov 2021 08:04:54 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"d951c982459d73af8ec127d96fbd6ac4"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7c92664c-260c-414b-8a9b-09f0b2cf1bc9
+      X-Runtime:
+      - '2.658330'
+      Transfer-Encoding:
+      - chunked
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"51680164097","type":"image","attributes":{"id":"51680164097","image":{"id":"51680164097","owner":"55443064@N03","secret":"55c6551364","server":"65535","farm":66,"title":"123_0234","ispublic":1,"isfriend":0,"isfamily":0},"credit":{"author":"","taken":"2021-11-13
+        09:39:37","url":"https://www.flickr.com/firtreezzz/51680164097"}}}}'
+  recorded_at: Mon, 15 Nov 2021 08:04:54 GMT
+recorded_with: VCR 6.0.0

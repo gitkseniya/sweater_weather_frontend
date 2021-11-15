@@ -17,14 +17,15 @@
   Highest temperature: <%= @roadtrip.max_temp %>C<br>
   Lowest temperature: <%= @roadtrip.min_temp %>C<br>
   Conditions: <%= @roadtrip.conditions %><br><br>
-<% end %>
 
-<% if @roadtrip.max_temp > 70 %>
-  <img src="https://lh3.googleusercontent.com/proxy/iPXlCxSAvwQgGQPKXNkQeVlFkGGppedmKfIfd7NcxOh-xqonFcBO6CcBDdSxWth-P_ndF4Tx3XQHT7XKDsozygbs" width="200" height="200"/>
-<% elsif   @roadtrip.max_temp > 45 %>
-  <img src="https://cdn4.iconfinder.com/data/icons/winter-cartoon-1/512/val46_5-512.png" width="250" height="250"/>
-<% else %>
-  <img src="https://thumbs.gfycat.com/CheapSparklingAntarcticgiantpetrel-max-1mb.gif" width="250" height="250"/>
+
+  <% if !@roadtrip.max_temp.nil? && @roadtrip.max_temp > 70 %>
+    <img src="https://lh3.googleusercontent.com/proxy/iPXlCxSAvwQgGQPKXNkQeVlFkGGppedmKfIfd7NcxOh-xqonFcBO6CcBDdSxWth-P_ndF4Tx3XQHT7XKDsozygbs" width="200" height="200"/>
+  <% elsif   !@roadtrip.max_temp.nil? && @roadtrip.max_temp > 45 %>
+    <img src="https://cdn4.iconfinder.com/data/icons/winter-cartoon-1/512/val46_5-512.png" width="250" height="250"/>
+  <% else %>
+    <img src="https://thumbs.gfycat.com/CheapSparklingAntarcticgiantpetrel-max-1mb.gif" width="250" height="250"/>
+  <% end %>
 <% end %>
 
 </div>

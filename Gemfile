@@ -30,6 +30,11 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry'
   gem 'rspec-rails', '~> 5.0.0'
+  gem 'shoulda-matchers', '~> 3.0.0'
+  gem 'simplecov', require: false, group: :test
+  gem 'webmock'
+  gem 'vcr'
+  gem 'capybara'
 end
 
 group :development do

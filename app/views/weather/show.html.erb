@@ -6,8 +6,8 @@
     <p class="card-text">Sunrise time: <%= @current_weather.sunrise_time %><br>
     Sunset time: <%= @current_weather.sunset_time %><br>
     Date and time now: <%= @current_weather.datetime %><br>
-    Temperature: <%= @current_weather.temperature %><br>
-    Feels like: <%= @current_weather.feels_like %><br>
+    Temperature: <%= @current_weather.temperature %>C<br>
+    Feels like: <%= @current_weather.feels_like %>C<br>
     Humidity: <%= @current_weather.humidity %><br>
     Uvi: <%= @current_weather.uvi %><br>
     Visibility: <%= @current_weather.visibility %><br>
@@ -18,11 +18,11 @@
 
     <h3 class="card-title">Daily Weather</h3>
     <p class="card-text"><% @daily_weather.each do |day| %>
-      Date: <%= day[:date] %><br>
-      Sunrise: <%= day[:sunrise] %><br>
-      Sunset: <%= day[:sunset] %><br>
-      Max temp: <%= day[:max_temp] %><br>
-      Min temp: <%= day[:min_temp] %><br>
+      Date: <%= day[:date].to_datetime.new_offset('MST').strftime('%B %d') %><br>
+      Sunrise: <%= day[:sunrise].to_datetime.new_offset('MST').strftime('%I:%M %p') %><br>
+      Sunset: <%= day[:sunset].to_datetime.new_offset('MST').strftime('%I:%M %p') %><br>
+      Max temp: <%= day[:max_temp] %>C<br>
+      Min temp: <%= day[:min_temp] %>C<br>
       Conditions: <%= day[:conditions] %><br><br>
     <% end %>
   </p>
@@ -30,8 +30,8 @@
 
     <h3 class="card-title">Hourly Weather</h3>
     <p class="card-text"><% @hourly_weather.each do |hour| %>
-      Time: <%= hour[:time] %><br>
-      Temperature: <%= hour[:temperature] %><br>
+      Time: <%= hour[:time].to_datetime.new_offset('MST').strftime('%I:%M %p %B %d, %Y') %><br>
+      Temperature: <%= hour[:temperature] %>C<br>
       Conditions: <%= hour[:conditions] %><br><br>
     <% end %>
     </p>
