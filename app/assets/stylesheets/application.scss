@@ -13,3 +13,23 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap";
+
+ body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  color: #000000;
+  text-shadow: 2px 2px 8px #ffffff;
+
+  background-image: url(https://free4kwallpapers.com/uploads/originals/2019/04/02/roadtrip-wallpaper.jpg);
+  background-repeat: repeat;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  height: 100%;
+}
